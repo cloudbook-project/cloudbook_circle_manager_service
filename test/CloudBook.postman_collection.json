@@ -1,0 +1,104 @@
+{
+	"variables": [],
+	"info": {
+		"name": "CloudBook",
+		"_postman_id": "4b8b1c8d-b3b2-0e93-36eb-3c8726ca3e9a",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "{{URL_CLOUD}}/create_circle",
+			"request": {
+				"url": "{{URL_CLOUD}}/create_circle",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Prueba3\",\n\t\"desc\": \"crear ciruclos 3\",\n\t\"agent_id\": \"1234\",\n\t\"url_fs\": \"NULL\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "{{URL_CLOUD}}/modify_circle",
+			"request": {
+				"url": "{{URL_CLOUD}}/modify_circle",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Prueba2\",\n\t\"desc\": \"Prueba para crear ciruclos\",\n\t\"agent_id\": \"1234\",\n\t\"url_fs\": \"NULL\",\n\t\"status\":\"\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "{{URL_CLOUD}}/get_circle/<agent_id>",
+			"request": {
+				"url": "{{URL_CLOUD}}/get_circle/1234",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "{{URL_CLOUD}}/attach_agent",
+			"request": {
+				"url": "{{URL_CLOUD}}/attach_agent",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"agent_id\": \"87324145\",\n\t\"circle_id\":\"830HFSVVU70HVS06B004\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "{{URL_CLOUD}}/get_circle_agents/<circle_id>",
+			"request": {
+				"url": "{{URL_CLOUD}}/get_circle_agents/830HFSVVU70HVS06B004",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "{{URL_CLOUD}}/get_circles",
+			"request": {
+				"url": "{{URL_CLOUD}}/get_circles",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
