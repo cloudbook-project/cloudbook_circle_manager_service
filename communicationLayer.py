@@ -35,7 +35,8 @@ def create_circles():
 def attach_agent():
     json_data = request.get_json()
     str_ret = dbManager.attach_agent_to_circle(json_data)
-    return str_ret
+    json_data = json.dumps(str_ret)
+    return json_data
 
 
 @app.route('/modify_circle', methods=['POST'])
