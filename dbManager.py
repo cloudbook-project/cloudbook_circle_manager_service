@@ -60,14 +60,14 @@ def attach_agent_to_circle(json_data):
         table_agent_circle = db.table('agent_circle')
         if table_agent_circle.search((Query().circle_id == tmp_agent_circle['circle_id'])
                                      & (Query().agent_id == tmp_agent_circle['agent_id'])):
-            return "Agent Already Attached"
+            return {"status": "Agent Already Attached"}
         else:
             table_agent_circle.insert(tmp_agent_circle)
             update_circle_agents(tmp_agent_circle['circle_id'], 1)
 
-        return "Agent Attach"
+        return {"status": "Agent Attach"}
     else:
-        return "Circle Not Exist"
+        return {"status": "Circle Not Exist"}
 
 
 def update_circle_agents(circle_id, num):
